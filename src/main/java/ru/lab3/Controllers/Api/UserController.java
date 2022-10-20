@@ -30,7 +30,7 @@ public class UserController {
 
     @GetMapping()
     public String index(Model model) {
-        model.addAttribute("user", userDAO.index());
+        model.addAttribute("users", userDAO.index());
         return "people/index";
     }
 

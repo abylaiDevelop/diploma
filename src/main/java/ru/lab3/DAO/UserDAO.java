@@ -34,7 +34,7 @@ public class UserDAO {
 
         try {
             Statement statement = connection.createStatement();
-            String SQL = "SELECT * FROM User";
+            String SQL = "SELECT * FROM public.\"User\"";
             ResultSet resultSet = statement.executeQuery(SQL);
 
             while(resultSet.next()) {
@@ -59,7 +59,7 @@ public class UserDAO {
 
         try {
             Statement statement = connection.createStatement();
-            String SQL = "INSERT INTO User VALUES(" + 1 + ",'" + user.getName() +
+            String SQL = "INSERT INTO public.\"User\" VALUES(" + 1 + ",'" + user.getName() +
                     "'," + user.getAge() + ",'" + user.getEmail() + "')";
 
             statement.executeUpdate(SQL);
